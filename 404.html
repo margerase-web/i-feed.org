@@ -40,6 +40,7 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .nav>ul>li>a[aria-current]{border-bottom-color:var(--ink)}
 .pgb{position:relative;overflow:hidden;background:#0B241F;color:#fff}
 .pgb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.pgb-bg.pgb-bot{object-position:center bottom}
 .pgb-bg.wbox{display:flex;align-items:flex-end;justify-content:flex-end;padding:16px;background:#5E6A66;color:#fff;font:500 12px/1 var(--sans)}
 .pgb-in{position:relative;min-height:300px;display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:48px;box-sizing:border-box}
 .pgb h1{font:700 48px/1.05 var(--sans);letter-spacing:-.03em;color:#fff;text-wrap:balance}
@@ -250,7 +251,7 @@ a.ifed-cover:hover{color:#fff}
 .ifed-cover .ifed-cover__line{position:absolute;left:0;right:0;top:72%;border-top:max(1px,.42cqw) solid #fff}
 .ifed-cover--wide{aspect-ratio:16/9;--m:4cqw}
 .ifed-cover.ifed-cover--wide .ifed-cover__reg{font-size:max(12px,1.2cqw);padding-top:1cqw;border-top-width:max(1px,.08cqw);gap:2cqw}
-.ifed-cover.ifed-cover--wide .ifed-cover__title{top:7.6cqw;right:auto;max-width:60%;font-size:var(--title-wide,4.375cqw);line-height:1.04;letter-spacing:-.022em;text-wrap:balance}
+.ifed-cover.ifed-cover--wide .ifed-cover__title{top:7.6cqw;right:auto;max-width:var(--tw-max,60%);font-size:var(--title-wide,4.375cqw);line-height:1.04;letter-spacing:-.022em;text-wrap:balance}
 .ifed-cover.ifed-cover--wide .ifed-cover__imprint{height:1.62cqw}
 .cv-pair .ifed-cover--wide{display:block}.cv-pair .ifed-cover:not(.ifed-cover--wide){display:none}
 
@@ -314,6 +315,9 @@ html:root{--sec:288px}
 .found{margin-top:24px;font:600 16px/1.5 var(--sans)}
 .partner-l{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:16px}
 @media (max-width:760px){.mp b{font-size:30px}.memf{padding:20px}}
+
+.rcv{display:flex;align-items:center;justify-content:center;aspect-ratio:3/4;overflow:hidden}
+.rcv img{display:block;width:100%;height:100%;object-fit:cover}
 
 /* ===== 1. scale ===== */
 :root{--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--gut:28px;--ctl:52px;--sec:96px;--pine:#26403A;--tint:#F4F6F5;--panel:#F4F6F5}
