@@ -8,8 +8,8 @@ body{margin:0}
 
 :root{--ink:#000000;--paper:#FFFFFF;--grey:#4B5551;--line:#D6DEDA;--sp:#0A5C4A;--sp2:#08463A;--tint:#EEF4F1;--panel:#F4F6F5;--kor:#178A6A;--cmp:#5A6FB4;
 --sans:"Schibsted Grotesk","Helvetica Neue",Arial,sans-serif;--serif:"Newsreader",Georgia,"Times New Roman",serif;
---t1:68px;--t2:44px;--t3:26px;--t4:19px;--t5:15px;--pad:40px;--sec:104px;--gap:32px;--max:1240px}
-@media (max-width:760px){:root{--t1:38px;--t2:30px;--t3:22px;--t4:17px;--t5:14px;--pad:20px;--sec:64px;--gap:20px}}
+--t1:68px;--t2:32px;--t3:24px;--t4:19px;--t5:15px;--pad:40px;--sec:104px;--gap:32px;--max:1240px}
+@media (max-width:760px){:root{--t1:38px;--t2:26px;--t3:20px;--t4:17px;--t5:14px;--pad:20px;--sec:64px;--gap:20px}}
 body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:var(--t4);line-height:1.55;-webkit-font-smoothing:antialiased}
 h1,h2,h3,h4,p,ul,ol,dl,dd,figure,blockquote{margin:0}ul,ol{padding:0;list-style:none}
 img{display:block;max-width:100%}
@@ -100,7 +100,7 @@ a{color:#000000}a:hover{color:#0A5C4A}
 /* cards */
 .card{display:flex;flex-direction:column;gap:10px}
 .card .cv,.card .ph{margin-bottom:8px}
-.card h3{font:700 22px/1.25 var(--sans);letter-spacing:-.01em;text-wrap:pretty}
+.card h3{font:700 19px/1.3 var(--sans);letter-spacing:-.005em;text-wrap:pretty}
 .card h3 a{text-decoration:none}.card h3 a:hover{text-decoration:underline;text-decoration-color:var(--sp);text-decoration-thickness:2px;text-underline-offset:4px}
 .card p.s{font:400 16px/1.5 var(--serif);color:#1d2522}
 .card .fx{font-size:14px;line-height:1.45;color:var(--grey)}
@@ -236,13 +236,13 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .phd,.ah{padding-top:40px}
 .crumb{margin:0 0 16px;font-size:14px;color:var(--grey)}
 main>.wrap:first-child>.crumb{padding-top:40px}
-.phd h1,.ah h1{font:700 56px/1.04 var(--sans);letter-spacing:-.028em;max-width:calc((100% + var(--gut)) * 8 / 12 - var(--gut))}
+.phd h1,.ah h1{font:700 40px/1.08 var(--sans);letter-spacing:-.028em;max-width:calc((100% + var(--gut)) * 8 / 12 - var(--gut))}
 .phd .plead,.phd .dek{margin-top:16px;max-width:calc((100% + var(--gut)) * 8 / 12 - var(--gut))}
 .phd .plead+.dek{margin-top:12px}
 .phd .jump{margin-top:32px}
 .phd+.sec,.phd+.feat{padding-top:var(--s8)}
 .phd+.feat{margin-top:0}
-@media (max-width:760px){.phd,.ah{padding-top:24px}.crumb{margin-bottom:12px}.phd h1,.ah h1{font-size:36px}.phd .plead,.phd .dek{margin-top:12px}.phd .jump{margin-top:24px}.phd+.sec,.phd+.feat{padding-top:48px}}
+@media (max-width:760px){.phd,.ah{padding-top:24px}.crumb{margin-bottom:12px}.phd h1,.ah h1{font-size:30px}.phd .plead,.phd .dek{margin-top:12px}.phd .jump{margin-top:24px}.phd+.sec,.phd+.feat{padding-top:48px}}
 
 /* ===== 1.2 section heads ===== */
 .sec{padding-top:var(--sec)}
