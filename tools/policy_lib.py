@@ -148,7 +148,7 @@ def render():
         open(p, 'w', encoding='utf-8').write(h2)
     js = os.path.join(ROOT, 'site.js'); s = open(js, encoding='utf-8').read()
     text = 'Policy Update ' + ' '.join(f'{nice_date(e["date"])} {e["body"]} {e["title"]}' for e in entries)
-    s2, k = re.subn(r'(\{"title": ?"Policy Update", ?"url": ?"/policy", ?"text": ?)"(?:[^"\\]|\\.)*"', lambda m: m.group(1) + json.dumps(text, ensure_ascii=False), s, count=1)
+    s2, k = re.subn(r'(\{"title": ?"Policy(?: Update)?", ?"url": ?"/policy", ?"text": ?)"(?:[^"\\]|\\.)*"', lambda m: m.group(1) + json.dumps(text, ensure_ascii=False), s, count=1)
     if k: open(js, 'w', encoding='utf-8').write(s2)
     return len(entries)
 
