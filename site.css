@@ -1,0 +1,33 @@
+/* IFEED public site: behaviour layer (phone menu, search, inert links, filters) */
+a.inert{cursor:default}
+a.inert:hover{text-decoration:none}
+.nav>ul>li>a.inert:hover{border-bottom-color:transparent}
+.is-hidden{display:none !important}
+body.lock{overflow:hidden}
+/* phone menu */
+.pm-panel{position:fixed;inset:0;z-index:100;background:#fff;overflow-y:auto;display:none}
+.pm-panel.open{display:block}
+.pm-panel .pm-h{display:flex;align-items:center;justify-content:space-between;height:64px;padding:0 20px;border-bottom:1px solid var(--line)}
+.pm-panel details{border-bottom:1px solid var(--line)}
+.pm-panel summary{display:flex;align-items:center;justify-content:space-between;min-height:56px;padding:0 20px;font:700 20px/1 var(--sans);cursor:pointer;list-style:none}
+.pm-panel summary::-webkit-details-marker{display:none}
+.pm-panel summary::after{content:"+";font-weight:500;font-size:24px}
+.pm-panel details[open] summary::after{content:"\2212"}
+.pm-panel .sub a{display:block;padding:12px 20px 12px 32px;font:500 17px/1.3 var(--sans);text-decoration:none;border-top:1px solid #eef1f0;color:var(--ink)}
+.pm-panel .x{border:1px solid var(--ink);border-radius:2px}
+/* search */
+.sr{position:fixed;inset:0;z-index:110;background:rgba(17,17,17,.35);display:none}
+.sr.open{display:block}
+.sr-box{background:#fff;max-width:var(--max);margin:0 auto;padding:28px var(--pad) 32px;box-sizing:border-box;border-bottom:2px solid var(--ink);max-height:100vh;overflow-y:auto}
+.sr-top{display:flex;gap:12px;align-items:center}
+.sr-top label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.sr-top input{flex:1;min-width:0;height:52px;border:1px solid var(--ink);border-radius:2px;padding:0 16px;font:400 18px/1 var(--sans)}
+.sr-top button{flex:none;width:52px;height:52px;border:1px solid var(--ink);border-radius:2px;background:#fff;cursor:pointer}
+.sr-list{margin-top:20px}
+.sr-list li{border-top:1px solid var(--line);padding:14px 0}
+.sr-list a{font:700 18px/1.3 var(--sans);text-decoration:none;color:var(--ink)}
+.sr-list a:hover{text-decoration:underline;text-decoration-color:var(--sp)}
+.sr-list p{margin-top:4px;font:400 15px/1.5 var(--serif);color:var(--grey)}
+.sr-list mark{background:none;color:var(--ink);font-weight:600}
+.sr-none{margin-top:20px;font:400 16px/1.5 var(--serif)}
+.form-note{margin-top:12px;font:400 15px/1.5 var(--sans)}

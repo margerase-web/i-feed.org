@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Six sessions: six dots at equal steps on one line">
+<title>Six sessions: six dots at equal steps on one line</title>
+<rect width="600" height="400" fill="#5E3A4E"/>
+<defs><mask id="dm-courses-32" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="400"><rect width="600" height="400" fill="#fff"/><g fill="#000"></g></mask></defs>
+<g stroke="#fff" stroke-width="2" mask="url(#dm-courses-32)"><line x1="0" y1="256" x2="600" y2="256"/></g>
+<circle cx="102" cy="229" r="26" fill="#fff"/><circle cx="181.2" cy="229" r="26" fill="#fff"/><circle cx="260.4" cy="229" r="26" fill="#fff"/><circle cx="339.6" cy="229" r="26" fill="#fff"/><circle cx="418.8" cy="229" r="26" fill="#fff"/><circle cx="498" cy="229" r="26" fill="#fff"/>
+</svg>
