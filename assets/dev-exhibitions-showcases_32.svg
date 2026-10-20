@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="3 pairs of a solid dot and a ring, side by side on one line">
-<title>3 pairs of a solid dot and a ring, side by side on one line</title>
-<rect width="600" height="400" fill="#5E3A4E"/>
-<defs><mask id="dm-exhibitions-showcases-32" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="400"><rect width="600" height="400" fill="#fff"/><g fill="#000"></g></mask></defs>
-<g stroke="#fff" stroke-width="2" mask="url(#dm-exhibitions-showcases-32)"><line x1="0" y1="256" x2="600" y2="256"/></g>
-<circle cx="108.38" cy="226.4" r="28.6" fill="#fff"/><circle cx="165.58" cy="226.4" r="26.1" fill="none" stroke="#fff" stroke-width="5"/><circle cx="271.4" cy="226.4" r="28.6" fill="#fff"/><circle cx="328.6" cy="226.4" r="26.1" fill="none" stroke="#fff" stroke-width="5"/><circle cx="434.42" cy="226.4" r="28.6" fill="#fff"/><circle cx="491.62" cy="226.4" r="26.1" fill="none" stroke="#fff" stroke-width="5"/>
-</svg>

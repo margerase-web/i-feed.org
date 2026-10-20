@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="One solid centre with six rings around it, on one line">
-<title>One solid centre with six rings around it, on one line</title>
-<rect width="600" height="400" fill="#5E3A4E"/>
-<defs><mask id="dm-lectures-briefings-32" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="400"><rect width="600" height="400" fill="#fff"/><g fill="#000"><circle cx="300" cy="256" r="36.49"/><circle cx="300" cy="180.29" r="26.49"/><circle cx="365.57" cy="218.14" r="26.49"/><circle cx="365.57" cy="293.86" r="26.49"/><circle cx="300" cy="331.71" r="26.49"/><circle cx="234.43" cy="293.86" r="26.49"/><circle cx="234.43" cy="218.14" r="26.49"/></g></mask></defs>
-<g stroke="#fff" stroke-width="2" mask="url(#dm-lectures-briefings-32)"><line x1="0" y1="256" x2="600" y2="256"/></g>
-<circle cx="300" cy="256" r="34.29" fill="#fff"/><circle cx="300" cy="180.29" r="21.79" fill="none" stroke="#fff" stroke-width="5"/><circle cx="365.57" cy="218.14" r="21.79" fill="none" stroke="#fff" stroke-width="5"/><circle cx="365.57" cy="293.86" r="21.79" fill="none" stroke="#fff" stroke-width="5"/><circle cx="300" cy="331.71" r="21.79" fill="none" stroke="#fff" stroke-width="5"/><circle cx="234.43" cy="293.86" r="21.79" fill="none" stroke="#fff" stroke-width="5"/><circle cx="234.43" cy="218.14" r="21.79" fill="none" stroke="#fff" stroke-width="5"/>
-</svg>

@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="A pile of five rings with one solid dot on top, resting on one line">
-<title>A pile of five rings with one solid dot on top, resting on one line</title>
-<rect width="600" height="400" fill="#5E3A4E"/>
-<defs><mask id="dm-commissioned-research-32" maskUnits="userSpaceOnUse" x="0" y="0" width="600" height="400"><rect width="600" height="400" fill="#fff"/><g fill="#000"></g></mask></defs>
-<g stroke="#fff" stroke-width="2" mask="url(#dm-commissioned-research-32)"><line x1="0" y1="256" x2="600" y2="256"/></g>
-<circle cx="237.6" cy="223.8" r="28.7" fill="none" stroke="#fff" stroke-width="5"/><circle cx="300" cy="223.8" r="28.7" fill="none" stroke="#fff" stroke-width="5"/><circle cx="362.4" cy="223.8" r="28.7" fill="none" stroke="#fff" stroke-width="5"/><circle cx="268.8" cy="169.76" r="28.7" fill="none" stroke="#fff" stroke-width="5"/><circle cx="331.2" cy="169.76" r="28.7" fill="none" stroke="#fff" stroke-width="5"/><circle cx="300" cy="115.72" r="31.2" fill="#fff"/>
-</svg>
