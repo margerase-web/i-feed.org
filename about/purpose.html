@@ -38,14 +38,23 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .nav>ul>li:hover>a,.nav>ul>li:focus-within>a{border-bottom-color:var(--sp)}
 .nav>ul>li>a[role=button]{cursor:default}
 .nav>ul>li>a[aria-current]{border-bottom-color:var(--ink)}
+.pb{position:relative;overflow:hidden;background:#0B241F;color:#fff}
+.pb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.pb-bg.wbox{display:flex;align-items:flex-end;justify-content:flex-end;padding:16px;background:#5E6A66;color:#fff;font:500 12px/1 var(--sans)}
+.pb-in{position:relative;min-height:300px;display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:48px;box-sizing:border-box}
+.pb h1{font:700 48px/1.05 var(--sans);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+.pb p{margin-top:16px;font:500 20px/1.35 var(--sans);color:rgba(255,255,255,.8)}
+.pb+.wrap .pg-b{margin-top:72px}
+.pb+.wrap>.sec:first-child{padding-top:72px !important}
+@media (max-width:760px){.pb-in{min-height:200px;padding-top:32px;padding-bottom:32px}.pb h1{font-size:32px}.pb p{margin-top:10px;font-size:16px}.pb+.wrap .pg-b{margin-top:40px}.pb+.wrap>.sec:first-child{padding-top:40px !important}}
 .nav>ul>li{position:relative}
-.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:14px 0 16px;background:var(--ink);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:12px 0 14px;background:#fff;border:1px solid var(--line);border-top:0;box-shadow:0 12px 24px rgba(0,0,0,.08)}
 .nav>ul>li:hover .mega,.nav>ul>li:focus-within .mega,.mega.open{display:block}
 .mega .ml{display:flex;flex-direction:column}
-.mega .ml a{display:block;padding:9px 28px;color:#fff;text-decoration:none;white-space:nowrap}
+.mega .ml a{display:block;padding:9px 28px;color:var(--ink);text-decoration:none;white-space:nowrap}
 .mega .ml a b{font:600 15px/1.35 var(--sans);letter-spacing:.005em}
-.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
-.mega .ml a:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-color:var(--sp);text-decoration-thickness:2px;text-underline-offset:4px}
+.mega .ml a:focus-visible{outline:2px solid var(--sp);outline-offset:-4px}
 .nav{margin-left:auto}
 .hdr-r{margin-left:-32px;margin-right:-12px;display:flex;align-items:center;gap:22px;font:600 16px/1 var(--sans)}
 .hdr-r a{text-decoration:none}
@@ -759,7 +768,7 @@ main>.wrap:first-child>.crumb{padding-top:32px}}
   </div>
 </header>
 <main id="main">
-<div class="wrap"><section class="pg-h"><h1>Purpose</h1></section><div class="pg-b"><p>The Institute for Entrepreneurial Ecosystem Development (IFEED) is a think tank in innovation policy. It specialises in research on policy for SMEs and startups and on entrepreneurial ecosystem policy, and in academic cooperation.</p><p>IFEED combines the rigour of academic theory with practical insight from the policy field to identify policy agendas suited to a fast-changing startup environment, and to design evidence-based policy alternatives.</p><p>IFEED was founded to set Korean policy for SMEs and startups in an international frame: to analyse it closely, to compare it with the innovation and entrepreneurial ecosystem policy paradigms of leading economies such as the UK, the US and the European Union, and to develop advanced policy solutions that cut across national, regional and global markets.</p><h2>Main Functions</h2><ul class="bl"><li>Research on the policy of the Korean government and the National Assembly for SMEs and startups</li><li>Comparative analysis of the innovation and entrepreneurial ecosystem policy paradigms of the UK, the US, the European Union and other leading economies</li><li>Identification of policy agendas for a fast-changing startup environment, and design of evidence-based policy alternatives</li><li>Research on five core themes: sustainable, global and transnational, digital and AI-driven, and inclusive and place-based ecosystems, and ecosystem governance and policy diagnostics</li><li>Publication of four annual policy report series and a weekly Policy Update on entrepreneurial ecosystem policy</li><li>Provision of data on Korean policy for SMEs and startups for academic use</li><li>Academic cooperation through conferences, forums, symposia and exhibitions</li><li>Recognition of researchers and practitioners through the IFEED Fellowship, and cooperation with partner organisations in Korea and abroad</li></ul></div></div><div class="sec"></div>
+<section class="pb" aria-labelledby="h-purpose"><img class="pb-bg" src="/assets/pb_purpose.jpg" alt=""><div class="wrap pb-in"><h1 id="h-purpose">Purpose</h1><p>Why IFEED was founded</p></div></section><div class="wrap"><div class="pg-b"><p>The Institute for Entrepreneurial Ecosystem Development (IFEED) is a think tank in innovation policy. It specialises in research on policy for SMEs and startups and on entrepreneurial ecosystem policy, and in academic cooperation.</p><p>IFEED combines the rigour of academic theory with practical insight from the policy field to identify policy agendas suited to a fast-changing startup environment, and to design evidence-based policy alternatives.</p><p>IFEED was founded to set Korean policy for SMEs and startups in an international frame: to analyse it closely, to compare it with the innovation and entrepreneurial ecosystem policy paradigms of leading economies such as the UK, the US and the European Union, and to develop advanced policy solutions that cut across national, regional and global markets.</p><h2>Main Functions</h2><ul class="bl"><li>Research on the policy of the Korean government and the National Assembly for SMEs and startups</li><li>Comparative analysis of the innovation and entrepreneurial ecosystem policy paradigms of the UK, the US, the European Union and other leading economies</li><li>Identification of policy agendas for a fast-changing startup environment, and design of evidence-based policy alternatives</li><li>Research on five core themes: sustainable, global and transnational, digital and AI-driven, and inclusive and place-based ecosystems, and ecosystem governance and policy diagnostics</li><li>Publication of four annual policy report series and a weekly Policy Update on entrepreneurial ecosystem policy</li><li>Provision of data on Korean policy for SMEs and startups for academic use</li><li>Academic cooperation through conferences, forums, symposia and exhibitions</li><li>Recognition of researchers and practitioners through the IFEED Fellowship, and cooperation with partner organisations in Korea and abroad</li></ul></div></div><div class="sec"></div>
 </main>
 <section class="subs" id="subscribe" aria-labelledby="h-subs">
   <div class="wrap subs-in">

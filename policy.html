@@ -38,14 +38,23 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .nav>ul>li:hover>a,.nav>ul>li:focus-within>a{border-bottom-color:var(--sp)}
 .nav>ul>li>a[role=button]{cursor:default}
 .nav>ul>li>a[aria-current]{border-bottom-color:var(--ink)}
+.pb{position:relative;overflow:hidden;background:#0B241F;color:#fff}
+.pb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.pb-bg.wbox{display:flex;align-items:flex-end;justify-content:flex-end;padding:16px;background:#5E6A66;color:#fff;font:500 12px/1 var(--sans)}
+.pb-in{position:relative;min-height:300px;display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:48px;box-sizing:border-box}
+.pb h1{font:700 48px/1.05 var(--sans);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+.pb p{margin-top:16px;font:500 20px/1.35 var(--sans);color:rgba(255,255,255,.8)}
+.pb+.wrap .pg-b{margin-top:72px}
+.pb+.wrap>.sec:first-child{padding-top:72px !important}
+@media (max-width:760px){.pb-in{min-height:200px;padding-top:32px;padding-bottom:32px}.pb h1{font-size:32px}.pb p{margin-top:10px;font-size:16px}.pb+.wrap .pg-b{margin-top:40px}.pb+.wrap>.sec:first-child{padding-top:40px !important}}
 .nav>ul>li{position:relative}
-.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:14px 0 16px;background:var(--ink);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:12px 0 14px;background:#fff;border:1px solid var(--line);border-top:0;box-shadow:0 12px 24px rgba(0,0,0,.08)}
 .nav>ul>li:hover .mega,.nav>ul>li:focus-within .mega,.mega.open{display:block}
 .mega .ml{display:flex;flex-direction:column}
-.mega .ml a{display:block;padding:9px 28px;color:#fff;text-decoration:none;white-space:nowrap}
+.mega .ml a{display:block;padding:9px 28px;color:var(--ink);text-decoration:none;white-space:nowrap}
 .mega .ml a b{font:600 15px/1.35 var(--sans);letter-spacing:.005em}
-.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
-.mega .ml a:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-color:var(--sp);text-decoration-thickness:2px;text-underline-offset:4px}
+.mega .ml a:focus-visible{outline:2px solid var(--sp);outline-offset:-4px}
 .nav{margin-left:auto}
 .hdr-r{margin-left:-32px;margin-right:-12px;display:flex;align-items:center;gap:22px;font:600 16px/1 var(--sans)}
 .hdr-r a{text-decoration:none}
@@ -758,10 +767,8 @@ main>.wrap:first-child>.crumb{padding-top:32px}}
 </header>
 <main id="main">
 
+<section class="pb" aria-labelledby="h-p"><img class="pb-bg" src="/assets/pb_policy.jpg" alt=""><div class="wrap pb-in"><h1 id="h-p">Policy Update</h1><p>Changes in entrepreneurial ecosystem policy, with links to the official sources</p></div></section>
 <div class="wrap">
-  <section class="phd" aria-labelledby="h-p">
-    <h1 id="h-p">Policy Update</h1>
-  </section>
 
   <section class="sec" aria-label="Policy Update">
     <ul class="plist"><li class="prow">

@@ -38,14 +38,23 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .nav>ul>li:hover>a,.nav>ul>li:focus-within>a{border-bottom-color:var(--sp)}
 .nav>ul>li>a[role=button]{cursor:default}
 .nav>ul>li>a[aria-current]{border-bottom-color:var(--ink)}
+.pb{position:relative;overflow:hidden;background:#0B241F;color:#fff}
+.pb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.pb-bg.wbox{display:flex;align-items:flex-end;justify-content:flex-end;padding:16px;background:#5E6A66;color:#fff;font:500 12px/1 var(--sans)}
+.pb-in{position:relative;min-height:300px;display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:48px;box-sizing:border-box}
+.pb h1{font:700 48px/1.05 var(--sans);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+.pb p{margin-top:16px;font:500 20px/1.35 var(--sans);color:rgba(255,255,255,.8)}
+.pb+.wrap .pg-b{margin-top:72px}
+.pb+.wrap>.sec:first-child{padding-top:72px !important}
+@media (max-width:760px){.pb-in{min-height:200px;padding-top:32px;padding-bottom:32px}.pb h1{font-size:32px}.pb p{margin-top:10px;font-size:16px}.pb+.wrap .pg-b{margin-top:40px}.pb+.wrap>.sec:first-child{padding-top:40px !important}}
 .nav>ul>li{position:relative}
-.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:14px 0 16px;background:var(--ink);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:12px 0 14px;background:#fff;border:1px solid var(--line);border-top:0;box-shadow:0 12px 24px rgba(0,0,0,.08)}
 .nav>ul>li:hover .mega,.nav>ul>li:focus-within .mega,.mega.open{display:block}
 .mega .ml{display:flex;flex-direction:column}
-.mega .ml a{display:block;padding:9px 28px;color:#fff;text-decoration:none;white-space:nowrap}
+.mega .ml a{display:block;padding:9px 28px;color:var(--ink);text-decoration:none;white-space:nowrap}
 .mega .ml a b{font:600 15px/1.35 var(--sans);letter-spacing:.005em}
-.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
-.mega .ml a:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-color:var(--sp);text-decoration-thickness:2px;text-underline-offset:4px}
+.mega .ml a:focus-visible{outline:2px solid var(--sp);outline-offset:-4px}
 .nav{margin-left:auto}
 .hdr-r{margin-left:-32px;margin-right:-12px;display:flex;align-items:center;gap:22px;font:600 16px/1 var(--sans)}
 .hdr-r a{text-decoration:none}
@@ -215,6 +224,9 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .pg-b .gr td{font:400 19px/1.55 var(--serif)}
 .pg-b .gr thead th{padding:12px 0;font:600 14px/1.3 var(--sans);color:var(--grey)}
 @media (max-width:760px){.pg-h{padding-top:32px}.pg-h h1{font-size:30px}.pg-b{margin-top:28px}.pg-b p{font-size:17px}.pg-b h2{margin-top:44px;font-size:21px}.pg-b h3{margin-top:28px;font-size:18px}.pg-b .stmt{font-size:19px}.pg-b .bl li{padding-left:20px;font-size:17px}.pg-b .gr th{width:38%;padding-right:14px;font-size:15px}.pg-b .gr td{font-size:17px}}
+
+.pg-b h3+.gd{margin-top:8px;font-style:italic}
+.pg-b .gd+.bl{margin-top:14px}
 
 /* ===== 1. scale ===== */
 :root{--s1:4px;--s2:8px;--s3:12px;--s4:16px;--s5:24px;--s6:32px;--s7:48px;--s8:64px;--s9:96px;--gut:28px;--ctl:52px;--sec:96px;--pine:#26403A;--tint:#F4F6F5;--panel:#F4F6F5}
@@ -759,7 +771,7 @@ main>.wrap:first-child>.crumb{padding-top:32px}}
   </div>
 </header>
 <main id="main">
-<div class="wrap"><section class="pg-h"><h1>Fellowship</h1></section><div class="pg-b"><p>The IFEED Fellowship recognises people who contribute to research, policy and practice in the entrepreneurial ecosystem.</p><p>It brings together entrepreneurs, startup mentors, accelerators, investors, researchers and students in Korea and other countries, and links their experience with IFEED’s research on entrepreneurial ecosystem policy.</p><h2>Grades</h2><table class="gr"><thead><tr><th scope="col">Grade</th><th scope="col">Description</th></tr></thead><tbody><tr><th scope="row">Member</th><td>Working in or studying the entrepreneurial ecosystem, with an understanding of its policy research and education</td></tr><tr><th scope="row">Associate Fellow</th><td>Established experience in, and a notable contribution to, the entrepreneurial ecosystem</td></tr><tr><th scope="row">Fellow</th><td>Significant experience, contribution and track record in the entrepreneurial ecosystem and its policy</td></tr></tbody></table><h2>Criteria</h2><h3>Member</h3><ul class="bl"><li>People who work in the entrepreneurial ecosystem, such as entrepreneurs, startup mentors, accelerators, venture investors, angel investors and researchers</li><li>People with a good understanding of entrepreneurial ecosystem policy research and education</li><li>University students studying SMEs and startups, and entrepreneurship</li></ul><h3>Associate Fellow</h3><ul class="bl"><li>People with at least five years’ experience in the entrepreneurial ecosystem as a researcher or practitioner</li><li>People who have made a notable contribution to the entrepreneurial ecosystem through publishing, education or business</li><li>People who have completed a degree programme in SMEs and startups, or entrepreneurship</li></ul><h3>Fellow</h3><ul class="bl"><li>People with at least ten years’ significant experience in, and contribution to, the entrepreneurial ecosystem as a researcher or practitioner</li><li>People with an academic or practical track record in the entrepreneurial ecosystem and its policy</li><li>People who hold a doctorate in a relevant field, such as engineering, the natural sciences, the social sciences or the humanities, or an equivalent qualification</li></ul></div></div><div class="sec"></div>
+<section class="pb" aria-labelledby="h-fellowship"><img class="pb-bg" src="/assets/pb_fellowship.jpg" alt=""><div class="wrap pb-in"><h1 id="h-fellowship">Fellowship</h1><p>Member, Associate Fellow and Fellow</p></div></section><div class="wrap"><div class="pg-b"><p>The IFEED Fellowship recognises people who contribute to research, policy and practice in the entrepreneurial ecosystem.</p><p>It is designed for people on different career paths: researchers who study entrepreneurial ecosystems and their policy, and practitioners who build and support SMEs and startups. Its members range from university students to people with long careers in the field.</p><h2>Pathways</h2><p>Fellows come to IFEED from one of two pathways, and the same criteria apply to both.</p><ul class="bl"><li><b>Researcher.</b> People who study entrepreneurial ecosystems, SMEs and startups, and their policy, through research, publishing and teaching.</li><li><b>Practitioner.</b> People who work in the entrepreneurial ecosystem, such as entrepreneurs, startup mentors, accelerators, venture investors and angel investors.</li></ul><h2>Grades</h2><p>Each grade reflects a stage of experience and contribution, from Member to Fellow.</p><h3>Member</h3><p class="gd">Working in or studying the entrepreneurial ecosystem, with an understanding of its policy research and education.</p><ul class="bl"><li>People who work in the entrepreneurial ecosystem, such as entrepreneurs, startup mentors, accelerators, venture investors, angel investors and researchers</li><li>People with a good understanding of entrepreneurial ecosystem policy research and education</li><li>University students studying SMEs and startups, and entrepreneurship</li></ul><h3>Associate Fellow</h3><p class="gd">Established experience in, and a notable contribution to, the entrepreneurial ecosystem.</p><ul class="bl"><li>People with at least five years’ experience in the entrepreneurial ecosystem as a researcher or practitioner</li><li>People who have made a notable contribution to the entrepreneurial ecosystem through publishing, education or business</li><li>People who have completed a degree programme in SMEs and startups, or entrepreneurship</li></ul><h3>Fellow</h3><p class="gd">Significant experience, contribution and track record in the entrepreneurial ecosystem and its policy.</p><ul class="bl"><li>People with at least ten years’ significant experience in, and contribution to, the entrepreneurial ecosystem as a researcher or practitioner</li><li>People with an academic or practical track record in the entrepreneurial ecosystem and its policy</li><li>People who hold a doctorate in a relevant field, such as engineering, the natural sciences, the social sciences or the humanities, or an equivalent qualification</li></ul></div></div><div class="sec"></div>
 </main>
 <section class="subs" id="subscribe" aria-labelledby="h-subs">
   <div class="wrap subs-in">

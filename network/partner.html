@@ -38,14 +38,23 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .nav>ul>li:hover>a,.nav>ul>li:focus-within>a{border-bottom-color:var(--sp)}
 .nav>ul>li>a[role=button]{cursor:default}
 .nav>ul>li>a[aria-current]{border-bottom-color:var(--ink)}
+.pb{position:relative;overflow:hidden;background:#0B241F;color:#fff}
+.pb-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.pb-bg.wbox{display:flex;align-items:flex-end;justify-content:flex-end;padding:16px;background:#5E6A66;color:#fff;font:500 12px/1 var(--sans)}
+.pb-in{position:relative;min-height:300px;display:flex;flex-direction:column;justify-content:center;padding-top:48px;padding-bottom:48px;box-sizing:border-box}
+.pb h1{font:700 48px/1.05 var(--sans);letter-spacing:-.03em;color:#fff;text-wrap:balance}
+.pb p{margin-top:16px;font:500 20px/1.35 var(--sans);color:rgba(255,255,255,.8)}
+.pb+.wrap .pg-b{margin-top:72px}
+.pb+.wrap>.sec:first-child{padding-top:72px !important}
+@media (max-width:760px){.pb-in{min-height:200px;padding-top:32px;padding-bottom:32px}.pb h1{font-size:32px}.pb p{margin-top:10px;font-size:16px}.pb+.wrap .pg-b{margin-top:40px}.pb+.wrap>.sec:first-child{padding-top:40px !important}}
 .nav>ul>li{position:relative}
-.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:14px 0 16px;background:var(--ink);box-shadow:0 10px 24px rgba(0,0,0,.16)}
+.mega{display:none;position:absolute;left:-14px;top:100%;z-index:20;min-width:180px;padding:12px 0 14px;background:#fff;border:1px solid var(--line);border-top:0;box-shadow:0 12px 24px rgba(0,0,0,.08)}
 .nav>ul>li:hover .mega,.nav>ul>li:focus-within .mega,.mega.open{display:block}
 .mega .ml{display:flex;flex-direction:column}
-.mega .ml a{display:block;padding:9px 28px;color:#fff;text-decoration:none;white-space:nowrap}
+.mega .ml a{display:block;padding:9px 28px;color:var(--ink);text-decoration:none;white-space:nowrap}
 .mega .ml a b{font:600 15px/1.35 var(--sans);letter-spacing:.005em}
-.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-thickness:1.5px;text-underline-offset:4px}
-.mega .ml a:focus-visible{outline:2px solid #fff;outline-offset:-4px}
+.mega .ml a:hover b,.mega .ml a:focus-visible b{text-decoration:underline;text-decoration-color:var(--sp);text-decoration-thickness:2px;text-underline-offset:4px}
+.mega .ml a:focus-visible{outline:2px solid var(--sp);outline-offset:-4px}
 .nav{margin-left:auto}
 .hdr-r{margin-left:-32px;margin-right:-12px;display:flex;align-items:center;gap:22px;font:600 16px/1 var(--sans)}
 .hdr-r a{text-decoration:none}
@@ -216,7 +225,7 @@ a{color:#000000}a:hover{color:#0A5C4A}
 .pg-b .gr thead th{padding:12px 0;font:600 14px/1.3 var(--sans);color:var(--grey)}
 @media (max-width:760px){.pg-h{padding-top:32px}.pg-h h1{font-size:30px}.pg-b{margin-top:28px}.pg-b p{font-size:17px}.pg-b h2{margin-top:44px;font-size:21px}.pg-b h3{margin-top:28px;font-size:18px}.pg-b .stmt{font-size:19px}.pg-b .bl li{padding-left:20px;font-size:17px}.pg-b .gr th{width:38%;padding-right:14px;font-size:15px}.pg-b .gr td{font-size:17px}}
 
-.pt-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:40px}
+.pt-g{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:0}
 .pt-g li{display:flex;align-items:center;justify-content:center;height:150px;padding:16px;box-sizing:border-box}
 .pt-g a{display:block}
 .pt-g a:hover img{opacity:.75}
@@ -767,7 +776,7 @@ main>.wrap:first-child>.crumb{padding-top:32px}}
   </div>
 </header>
 <main id="main">
-<div class="wrap"><section class="pg-h"><h1>Partner</h1></section><div class="pg-b"><p>Organisations that support IFEED’s work.</p><ul class="pt-g" aria-label="Partners"><li><a href="https://www.socialenterprise.academy/" target="_blank" rel="noopener noreferrer"><img src="/assets/social-enterprise-academy.png" alt="Social Enterprise Academy (opens in a new tab)" style="--w:148px" loading="lazy"></a></li><li><a href="https://theacceleratornetwork.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/accelerator-network.png" alt="The Accelerator Network (opens in a new tab)" style="--w:220px" loading="lazy"></a></li><li><a href="https://www.tenentrepreneurs.org/" target="_blank" rel="noopener noreferrer"><img src="/assets/ten.png" alt="The Entrepreneurs Network (opens in a new tab)" style="--w:143px" loading="lazy"></a></li><li><a href="https://www.ukbaa.org.uk/" target="_blank" rel="noopener noreferrer"><img src="/assets/ukbaa.png" alt="UK Business Angels Association (opens in a new tab)" style="--w:120px" loading="lazy"></a></li><li><a href="https://venturecup.dk/" target="_blank" rel="noopener noreferrer"><img src="/assets/venture-cup-denmark.png" alt="Venture Cup Denmark (opens in a new tab)" style="--w:191px" loading="lazy"></a></li><li><a href="https://www.techitforward.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/tech-it-forward.png" alt="Tech it Forward (opens in a new tab)" style="--w:188px" loading="lazy"></a></li><li><a href="https://nestainvestments.org.uk/" target="_blank" rel="noopener noreferrer"><img src="/assets/nesta-impact-investments.png" alt="Nesta Impact Investments (opens in a new tab)" style="--w:152px" loading="lazy"></a></li><li><a href="https://www.londonmet.ac.uk/services-and-facilities/accelerator/" target="_blank" rel="noopener noreferrer"><img src="/assets/accelerator-london.png" alt="Accelerator, London’s Business Incubator (opens in a new tab)" style="--w:152px" loading="lazy"></a></li><li><a href="https://www.idealondon.co.uk/" target="_blank" rel="noopener noreferrer"><img src="/assets/idealondon.png" alt="IDEALondon (opens in a new tab)" style="--w:173px" loading="lazy"></a></li><li><a href="https://grassmarket.org/" target="_blank" rel="noopener noreferrer"><img src="/assets/grassmarket.png" alt="Grassmarket Community Project (opens in a new tab)" style="--w:140px" loading="lazy"></a></li><li><a href="https://www.businessgrowthhub.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/business-growth-hub.png" alt="Business Growth Hub Greater Manchester (opens in a new tab)" style="--w:201px" loading="lazy"></a></li></ul></div></div><div class="sec"></div>
+<section class="pb" aria-labelledby="h-partner"><img class="pb-bg" src="/assets/pb_partner.jpg" alt=""><div class="wrap pb-in"><h1 id="h-partner">Partner</h1><p>Organisations that support our work</p></div></section><div class="wrap"><div class="pg-b"><ul class="pt-g" aria-label="Partners"><li><a href="https://www.socialenterprise.academy/" target="_blank" rel="noopener noreferrer"><img src="/assets/social-enterprise-academy.png" alt="Social Enterprise Academy (opens in a new tab)" style="--w:148px" loading="lazy"></a></li><li><a href="https://theacceleratornetwork.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/accelerator-network.png" alt="The Accelerator Network (opens in a new tab)" style="--w:220px" loading="lazy"></a></li><li><a href="https://www.tenentrepreneurs.org/" target="_blank" rel="noopener noreferrer"><img src="/assets/ten.png" alt="The Entrepreneurs Network (opens in a new tab)" style="--w:143px" loading="lazy"></a></li><li><a href="https://www.ukbaa.org.uk/" target="_blank" rel="noopener noreferrer"><img src="/assets/ukbaa.png" alt="UK Business Angels Association (opens in a new tab)" style="--w:120px" loading="lazy"></a></li><li><a href="https://venturecup.dk/" target="_blank" rel="noopener noreferrer"><img src="/assets/venture-cup-denmark.png" alt="Venture Cup Denmark (opens in a new tab)" style="--w:191px" loading="lazy"></a></li><li><a href="https://www.techitforward.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/tech-it-forward.png" alt="Tech it Forward (opens in a new tab)" style="--w:188px" loading="lazy"></a></li><li><a href="https://nestainvestments.org.uk/" target="_blank" rel="noopener noreferrer"><img src="/assets/nesta-impact-investments.png" alt="Nesta Impact Investments (opens in a new tab)" style="--w:152px" loading="lazy"></a></li><li><a href="https://www.londonmet.ac.uk/services-and-facilities/accelerator/" target="_blank" rel="noopener noreferrer"><img src="/assets/accelerator-london.png" alt="Accelerator, London’s Business Incubator (opens in a new tab)" style="--w:152px" loading="lazy"></a></li><li><a href="https://www.idealondon.co.uk/" target="_blank" rel="noopener noreferrer"><img src="/assets/idealondon.png" alt="IDEALondon (opens in a new tab)" style="--w:173px" loading="lazy"></a></li><li><a href="https://grassmarket.org/" target="_blank" rel="noopener noreferrer"><img src="/assets/grassmarket.png" alt="Grassmarket Community Project (opens in a new tab)" style="--w:140px" loading="lazy"></a></li><li><a href="https://www.businessgrowthhub.com/" target="_blank" rel="noopener noreferrer"><img src="/assets/business-growth-hub.png" alt="Business Growth Hub Greater Manchester (opens in a new tab)" style="--w:201px" loading="lazy"></a></li></ul></div></div><div class="sec"></div>
 </main>
 <section class="subs" id="subscribe" aria-labelledby="h-subs">
   <div class="wrap subs-in">
