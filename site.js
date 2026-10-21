@@ -162,7 +162,26 @@
   }
 
   /* Forms: open an email to IFEED with what was typed (no server on this site) */
-  document.querySelectorAll('main form, .subs form').forEach(function (f) {
+  /* Get Policy Update: addresses go to the client's Google Form 'IFEED Policy Update subscribers' and its linked Google Sheet (client, 21 Oct) */
+  var GFORM = 'https://docs.google.com/forms/d/e/1FAIpQLSd6tckVzkSZi2q15WRlHWwFFzXLZh0xH2yg3M_5qjqQHidlwA/formResponse';
+  var GFIELD = 'entry.640214725';
+  document.querySelectorAll('.subs form').forEach(function (f) {
+    f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var inp = f.querySelector('input[type="email"]'), btn = f.querySelector('button'), v = (inp.value || '').trim();
+      var note = f.parentNode.querySelector('.subs-note');
+      if (!note) { note = el('p', { 'class': 'subs-note', role: 'status' }); f.parentNode.insertBefore(note, f.nextSibling); }
+      if (!v || !inp.checkValidity()) { note.textContent = 'Please enter a valid email address.'; inp.focus(); return; }
+      btn.disabled = true; note.textContent = 'Sending\u2026';
+      fetch(GFORM, { method: 'POST', mode: 'no-cors', body: new URLSearchParams([[GFIELD, v]]) })
+        .then(function () { note.textContent = 'Thank you. You are now subscribed to Policy Update.'; f.reset(); })
+        .catch(function () { note.textContent = 'Sorry, your address could not be sent. Please try again later.'; })
+        .then(function () { btn.disabled = false; });
+    });
+  });
+
+  document.querySelectorAll('main form').forEach(function (f) {
+    if (f.closest('.subs')) return;
     f.addEventListener('submit', function (e) {
       e.preventDefault();
       var note = f.querySelector('.form-note') || f.appendChild(el('p', { 'class': 'form-note', role: 'status' }));

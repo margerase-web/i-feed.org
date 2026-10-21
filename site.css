@@ -32,3 +32,6 @@ body.lock{overflow:hidden}
 .sr-list mark{background:none;color:var(--ink);font-weight:600}
 .sr-none{margin-top:20px;font:400 16px/1.5 var(--serif)}
 .form-note{margin-top:12px;font:400 15px/1.5 var(--sans)}
+
+/* Get Policy Update: status line under the form */
+.subs .subs-note{margin-top:14px;font:400 16px/1.5 var(--serif);color:#fff}
