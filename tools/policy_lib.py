@@ -81,6 +81,8 @@ def first_page(news_id, out_jpg):
     with tempfile.TemporaryDirectory() as td:
         png, how = os.path.join(td, 'p.png'), None
         pdfs = [a for a in atts if a[1].lower().endswith('.pdf')]
+        # the release itself, not an agenda paper or annex attached beside it
+        pdfs = [a for a in pdfs if '보도' in a[1]] or [a for a in pdfs if not re.search(r'안건|붙임|별첨|첨부|참고자료|설명자료', a[1])]
         if pdfs:
             f = os.path.join(td, 'a.pdf'); curl([f'https://www.korea.kr/common/download.do?fileId={pdfs[0][0]}&tblKey=GMN'], f)
             subprocess.run(['pdftoppm', '-r', '110', '-f', '1', '-l', '1', '-png', '-singlefile', f, png[:-4]], check=True); how = 'pdf'
@@ -109,7 +111,9 @@ def first_page(news_id, out_jpg):
                 if os.path.exists(os.path.join(td, 'a.pdf')):
                     subprocess.run(['pdftoppm', '-r', '110', '-f', '1', '-l', '1', '-png', '-singlefile', os.path.join(td, 'a.pdf'), png[:-4]], check=True); how = 'converted'; break
         if not how: raise RuntimeError(f'no first page for {news_id}')
-        im = Image.open(png).convert('RGB'); w = 640; im = im.resize((w, int(im.height * w / im.width)))
+        im = Image.open(png).convert('RGB')
+        if im.width > im.height * 1.2: im = im.crop((0, 0, im.width // 2, im.height))   # two pages side by side: keep the first
+        w = 640; im = im.resize((w, int(im.height * w / im.width)))
         im.crop((0, 0, w, min(im.height, 480))).save(out_jpg, quality=80, optimize=True, progressive=True)
     return dict(kogl=kogl.group(1) if kogl else None, source=how)
 
