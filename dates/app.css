@@ -21,7 +21,7 @@
 .ds-kpi.ev b { color:#67e8f9; text-shadow:0 0 12px rgba(34,211,238,.8); }
 .ds-kpi.tr b { color:#fbbf24; text-shadow:0 0 12px rgba(245,158,11,.7); }
 .ds-tk-v { color:#fbbf24; font-weight:700; }
-.ds-clock { text-align:right; min-width:132px; flex:none; }
+.ds-clock { text-align:right; min-width:120px; flex:none; }
 .ds-clock > div:first-child { font-size:18px; color:#fff; letter-spacing:.08em; font-variant-numeric:tabular-nums; }
 .ds-clock-sub { font-size:10px; color:var(--ds-dim); letter-spacing:.1em; }
 
@@ -158,7 +158,7 @@
 .ds-legend { width:var(--pw); }
 @container (max-width: 1700px) { .ds-kpi.opt { display:none; } }
 @container (max-width: 1540px) { .ds-live { display:none; } }
-@container (max-width: 1380px) { .ds-kpi.opt2, .ds-sub { display:none; } .ds-mode { padding:5px 10px; font-size:11px; } }
+@container (max-width: 1460px) { .ds-kpi.opt2, .ds-sub { display:none; } .ds-mode { padding:5px 10px; font-size:11px; } }
 @container (max-width: 1120px) { .ds-clock { display:none; } }
 @container (max-width: 1040px) { .ds-live { display:none; } .ds-clock-sub { display:none; } }
 
@@ -281,3 +281,10 @@ select.ds-in option { background:#0b0a18; }
   .ds-rec-main { min-height:420px; }
   .ds-graphinfo { display:none; }
 }
+.ds-cf-grid.three { grid-template-columns:repeat(3,1fr); }
+.ds-sent { display:flex; height:8px; border-radius:6px; overflow:hidden; margin:6px 0 6px; background:rgba(255,255,255,.06); }
+.ds-sent span { display:block; height:100%; }
+.ds-sent-l { display:flex; gap:10px; font-size:10.5px; color:#a5a0d0; margin-bottom:10px; font-family:"Inter",-apple-system,sans-serif; }
+.ds-sent-l i { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:4px; }
+.ds-table td.src { color:#a5a0d0; font-size:11.5px; }
+.ds-dim { color:#8f89bd; font-weight:400; }
