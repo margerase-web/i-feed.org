@@ -288,3 +288,31 @@ select.ds-in option { background:#0b0a18; }
 .ds-sent-l i { display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:4px; }
 .ds-table td.src { color:#a5a0d0; font-size:11.5px; }
 .ds-dim { color:#8f89bd; font-weight:400; }
+
+/* ---- sync batches ---- */
+.ds-batch { border:1px solid rgba(167,139,250,.22); border-radius:10px; padding:9px 10px; background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.015)); transition:box-shadow .6s, border-color .6s; }
+.ds-batch.new { border-color:rgba(250,204,21,.6); box-shadow:0 0 0 1px rgba(250,204,21,.35), 0 0 26px rgba(250,204,21,.18); animation:ds-batchin .55s cubic-bezier(.2,.9,.3,1.2); }
+.ds-batch-h { display:flex; align-items:baseline; gap:8px; cursor:pointer; }
+.ds-batch-src { font:800 9.5px/1 "SF Mono",Menlo,monospace; letter-spacing:.16em; }
+.ds-batch-t { font:700 12.5px/1 "SF Mono",Menlo,monospace; color:#fff; }
+.ds-batch-n { margin-left:auto; font:800 14px/1 "SF Mono",Menlo,monospace; color:#fde68a; text-shadow:0 0 10px rgba(250,204,21,.6); }
+.ds-batch-bar { display:flex; height:5px; border-radius:4px; overflow:hidden; margin:7px 0 6px; gap:1px; }
+.ds-batch-bar span { display:block; height:100%; }
+.ds-batch-meta { font:11px/1.3 "Inter",-apple-system,sans-serif; color:#a5a0d0; display:flex; align-items:center; gap:4px; flex-wrap:wrap; }
+.ds-batch-meta i { display:inline-block; width:6px; height:6px; border-radius:50%; margin-left:4px; }
+.ds-batch-cards { display:flex; flex-direction:column; gap:6px; margin-top:8px; }
+.ds-batch-cards .ds-card { padding:6px 8px 6px 11px; }
+.ds-batch-cards .ds-card-t { font-size:11.5px; }
+.ds-batch-more { all:unset; cursor:pointer; display:block; margin-top:7px; font:600 11px/1 "Inter",-apple-system,sans-serif; color:#c4b5fd; }
+.ds-batch-more:hover { color:#fff; }
+.ds-batch.collapsed { padding:7px 10px; opacity:.72; }
+.ds-batch.collapsed .ds-batch-cards, .ds-batch.collapsed .ds-batch-more, .ds-batch.collapsed .ds-batch-meta { display:none; }
+.ds-batch.collapsed .ds-batch-bar { margin:6px 0 0; height:3px; }
+.ds-newpill { position:absolute; top:30px; left:50%; transform:translateX(-50%); z-index:6; width:max-content; max-width:calc(100% - 20px); padding:6px 12px; border-radius:999px; background:linear-gradient(90deg,#facc15,#fb923c); color:#1a1205; font:800 11.5px/1 "Inter",-apple-system,sans-serif; box-shadow:0 0 22px rgba(250,204,21,.55); animation:ds-pillin .35s ease-out; }
+.ds-newpill span { font-weight:600; opacity:.75; margin-left:6px; }
+.ds-newpill.out { opacity:0; transform:translate(-50%,-8px); transition:all .5s; }
+.ds-topbar.sync .ds-clock-sub, .ds-topbar.sync .ds-kpi.ev b { color:#fde68a; text-shadow:0 0 12px rgba(250,204,21,.8); transition:none; }
+.ds-clock-sub, .ds-kpi.ev b { transition:color 1.2s, text-shadow 1.2s; }
+@keyframes ds-batchin { from { opacity:0; transform:translateY(-14px) scale(.97); } to { opacity:1; transform:none; } }
+@keyframes ds-pillin { from { opacity:0; transform:translate(-50%,-10px) scale(.9); } to { opacity:1; transform:translate(-50%,0); } }
+.ds-lockt { color:#c4b5fd; font-size:11.5px; }
