@@ -159,10 +159,19 @@ def render():
 if __name__ == '__main__':
     cmd = sys.argv[1]
     if cmd == 'candidates':   # python3 tools/policy_lib.py candidates [YYYY-MM-DD monday]; default: last week
-        today = dt.date.today(); mon = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else today - dt.timedelta(days=today.weekday() + 7)
+        # Korea time: the weekly run fires Monday 08:48 KST, which is still Sunday in UTC
+        today = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date(); mon = dt.date.fromisoformat(sys.argv[2]) if len(sys.argv) > 2 else today - dt.timedelta(days=today.weekday() + 7)
         print(f'week of {mon}')
         for x in candidates(mon): print(f"{x['score']:>3}  {x['date']}  {x['body_ko']}  {x['newsId']}  {x['title_ko']}")
     elif cmd == 'add':        # python3 tools/policy_lib.py add WEEK_MONDAY NEWS_ID BODY_KO DATE "English title" "Korean title"
         add_entry(*sys.argv[2:8]); print('entries', render())
+    elif cmd == 'missing':    # python3 tools/policy_lib.py missing: Mondays (Korea time) from the latest entry up to last week that have no entry yet
+        today = dt.datetime.now(dt.timezone(dt.timedelta(hours=9))).date(); last = today - dt.timedelta(days=today.weekday() + 7)
+        have = {e['week'] for e in load()}; latest = dt.date.fromisoformat(max(have))
+        w = latest + dt.timedelta(days=7); out = []
+        while w <= last:
+            if w.isoformat() not in have: out.append(w.isoformat())
+            w += dt.timedelta(days=7)
+        print(' '.join(out) if out else 'none')
     elif cmd == 'render':
         print('entries', render())
